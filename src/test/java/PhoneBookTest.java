@@ -5,21 +5,28 @@ import org.mockito.Mockito;
 public class PhoneBookTest {
     @Test
     public void add() {
-        Contact contact= Mockito.mock(Contact.class);
+        Contact contact = Mockito.mock(Contact.class);
         Mockito.when(contact.getNumber()).thenReturn(123);
         Mockito.when(contact.getName()).thenReturn("Ivan");
         PhoneBook phoneBook = PhoneBook.getInstance();
         phoneBook.add(contact);
-        String expected="Ivan";
-        String granted=phoneBook.getMap().get(contact.getNumber());
-        Assertions.assertEquals(expected,granted);
+        String expected = "Ivan";
+        String granted = phoneBook.getMap().get(contact.getNumber());
+        Assertions.assertEquals(expected, granted);
 
     }
+
     @Test
-    public void findByNumber(){
-        String expected=null;
-        String granted=null;
-        Assertions.assertEquals(expected,granted);
+    public void findByNumber() {
+        Contact contact = Mockito.mock(Contact.class);
+        Mockito.when(contact.getNumber()).thenReturn(123);
+        Mockito.when(contact.getName()).thenReturn("Ivan");
+        PhoneBook phoneBook = PhoneBook.getInstance();
+        phoneBook.add(contact);
+        String expected = "Ivan";
+        String granted = phoneBook.findByNumber(contact.getNumber());
+        Assertions.assertEquals(expected, granted);
+
     }
 
 
