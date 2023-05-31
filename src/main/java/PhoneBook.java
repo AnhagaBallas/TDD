@@ -18,6 +18,9 @@ public class PhoneBook {
     public void add(Contact contact) {
         map.put(contact.getNumber(), contact.getName());
     }
+    public String findByNumber(){
+        return null;
+    }
 
     public Map<Integer, String> getMap() {
         return map;

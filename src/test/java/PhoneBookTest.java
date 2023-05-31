@@ -15,6 +15,12 @@ public class PhoneBookTest {
         Assertions.assertEquals(expected,granted);
 
     }
+    @Test
+    public void findByNumber(){
+        String expected=null;
+        String granted=null;
+        Assertions.assertEquals(expected,granted);
+    }
 
 
 }
